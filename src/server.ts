@@ -19,7 +19,7 @@ app.register(pollResults)
 
 app
   .listen({
-    port: 3000,
+    port: Number(process.env.PORT) ?? 3000,
   })
   .then((address) => {
     console.log(`HTTP server started at ${address}`)
